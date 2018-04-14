@@ -4,6 +4,7 @@
   "description": "Setup click handlers for your objects in threejs",
   "main": "lib/index.js",
   "author": "icynoangel",
+  "license": "MIT",
   "scripts": {
     "build": "babel src/ThreeConnect.js --out-file lib/index.js"
   },
