@@ -1,6 +1,6 @@
 {
   "name": "three.connect",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Setup click handlers for your objects in threejs",
   "main": "lib/index.js",
   "author": "icynoangel",
