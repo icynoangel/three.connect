@@ -2,6 +2,14 @@
   "name": "three.connect",
   "version": "0.2.1",
   "description": "Setup click handlers for your objects in threejs",
+  "keywords": [
+    "threejs",
+    "click",
+    "hover",
+    "handlers",
+    "raycaster",
+    "intersects"
+  ],
   "main": "lib/index.js",
   "author": "icynoangel",
   "license": "MIT",
@@ -10,13 +18,54 @@
     "url": "https://github.com/icynoangel/three.connect.git"
   },
   "scripts": {
-    "build": "babel src/ThreeConnect.js --out-file lib/index.js"
+    "build": "babel src/ThreeConnect.js --out-file lib/index.js",
+    "prepare": "babel src/ThreeConnect.js --out-file lib/index.js",
+    "test": "jest --env=jsdom",
+    "coverage": "jest --env=jsdom --coverage"
   },
   "dependencies": {
     "three": "0.89.0"
   },
   "devDependencies": {
     "babel-cli": "^6.0.0",
-    "babel-preset-env": "^1.6.1"
+    "babel-jest": "20.0.3",
+    "babel-preset-env": "^1.6.1",
+    "jest": "20.0.4",
+    "object-assign": "^4.1.1",
+    "promise": "^8.0.1",
+    "whatwg-fetch": "^2.0.4"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "setupFiles": [
+      "<rootDir>/config/polyfills.js"
+    ],
+    "testMatch": [
+      "<rootDir>/tests/**/?(*.)(spec|test).js"
+    ],
+    "testEnvironment": "node",
+    "testURL": "http://localhost",
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+      "^(?!.*\\.(js|json)$)": "<rootDir>/config/jest/fileTransform.js"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
+    ],
+    "moduleNameMapper": {
+      "^react-native$": "react-native-web",
+      "^src(.*)$": "<rootDir>/src/$1"
+    },
+    "moduleFileExtensions": [
+      "web.js",
+      "js",
+      "json",
+      "web.jsx",
+      "jsx",
+      "node"
+    ],
+    "verbose": true
   }
 }
