@@ -29,11 +29,26 @@ const handlerFunction = () => {
 // connect your mesh for click events
 threeconnect.connect(mesh, handlerFunction);
 
-// to remove events listeners
-threeconnect.cleanup();
+// OR
 
-// to add back event listeners
-threeconnect.setupRaycaster();
+threeconnect.connect(mesh.name, handlerFunction);
+
+
+// disable event listeners - handlers references are still kept
+threeconnect.disable();
+
+// enable event listeners
+threeconnect.enable();
+
+// disconnect a specific mesh
+threeconnect.disconnect(mesh);
+
+// OR
+
+threeconnect.disconnect(mesh.name);
+
+// disconect all registered meshes
+threeconnect.disconnectAll();
 
 ```
 

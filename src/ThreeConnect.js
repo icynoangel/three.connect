@@ -21,7 +21,7 @@ class ThreeConnect {
     this.onMouseClick = this.onMouseClick.bind(this);
     this.onMouseMove = this.onMouseMove.bind(this);
 
-    this.setupRaycaster();
+    this.enable();
   }
 
   /**
@@ -36,15 +36,15 @@ class ThreeConnect {
 
   /**
    * Connect an object (the object will respond to click and hover events)
-   * @param  {object} object  threejs mesh instance
+   * @param  {object || string} item  threejs mesh instance or mesh name
    * @param  {function} callback handler to execute on click
    */
-  connect(object, callback) {
-    if (typeof object !== 'object') {
-      console.error('[three.connect] error - connect expects and object as the first parameter');
+  connect(item, callback) {
+    if (typeof item !== 'object' && typeof item !== 'string') {
+      console.error('[three.connect] error - connect expects and object or a string as the first parameter');
       return;
     }
-    if (typeof object.name === "undefined") {
+    if (typeof item === 'object' && typeof item.name === "undefined") {
       console.error('[three.connect] error - connect expects object to have a name property');
       return;
     }
@@ -53,7 +53,31 @@ class ThreeConnect {
       return;
     }
 
-    this.handlers[object.name] = callback;
+    const key = typeof item === 'object' ? item.name : item;
+    
+    this.handlers[key] = callback;
+  }
+
+  /**
+   * Disconnect a specific item - remove handler for it
+   * @param  {object || string} item 
+   */
+  disconnect(item) {
+    if (typeof item !== 'object' && typeof item !== 'string') {
+      console.error('[three.connect] error - disconnect expects and object or a string as parameter');
+      return;
+    }
+
+    const key = typeof item === 'object' ? item.name : item;
+    
+    delete this.handlers[key]; 
+  }
+
+  /**
+   * Disconnect all - remove all handlers
+   */
+  disconnectAll() {
+    this.handlers = {};
   }
 
   /**
@@ -100,7 +124,7 @@ class ThreeConnect {
       
       if(this.handlers[objectName]) {
         this.canvas.style.cursor = 'pointer';
-        return objectName;        
+        return objectName;     
       }
     } 
     this.canvas.style.cursor = 'inherit';
@@ -131,15 +155,15 @@ class ThreeConnect {
   /**
    * Add event listeners
    */
-  setupRaycaster() {
+  enable() {
     this.canvas.addEventListener('click', this.onMouseClick, false);
     this.canvas.addEventListener('mousemove', this.onMouseMove, false);
   }
 
   /**
-   * Cleanup event listeners
+   * Remove event listeners
    */
-  cleanup() {
+  disable() {
     this.canvas.removeEventListener('click', this.onMouseClick);
     this.canvas.removeEventListener('mousemove', this.onMouseMove);
   }
