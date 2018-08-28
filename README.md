@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/{icynoangel}/{three.connect}.png?branch=master)](https://travis-ci.org/{icynoangel}/{three.connect})
 
+[![codecov](https://codecov.io/gh/icynoangel/three.connect/branch/master/graph/badge.svg)](https://codecov.io/gh/icynoangel/three.connect)
+
 ### Light implementation for setting up click handlers on threejs objects
 
 1. Sets up click handlers for objects in threejs
