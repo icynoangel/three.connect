@@ -1,8 +1,6 @@
 [![NPM](https://nodei.co/npm/three.connect.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/three.connect/)
 
-[![Build Status](https://travis-ci.org/{icynoangel}/{three.connect}.png?branch=master)](https://travis-ci.org/{icynoangel}/{three.connect})
-
-[![codecov](https://codecov.io/gh/icynoangel/three.connect/branch/master/graph/badge.svg)](https://codecov.io/gh/icynoangel/three.connect)
+[![Build Status](https://travis-ci.org/{icynoangel}/{three.connect}.png?branch=master)](https://travis-ci.org/{icynoangel}/{three.connect}) [![codecov](https://codecov.io/gh/icynoangel/three.connect/branch/master/graph/badge.svg)](https://codecov.io/gh/icynoangel/three.connect) [![HitCount](http://hits.dwyl.com/{icynoangel}/{three.connect}.svg)](http://hits.dwyl.com/{icynoangel}/{three.connect})
 
 ### Light implementation for setting up click handlers on threejs objects
 
