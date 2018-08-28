@@ -36,6 +36,8 @@
     "whatwg-fetch": "^2.0.4"
   },
   "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
     "collectCoverageFrom": [
       "src/**/*.js"
     ],
