@@ -1,6 +1,6 @@
 [![NPM](https://nodei.co/npm/three.connect.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/three.connect/)
 
-[![Build Status](https://travis-ci.org/icynoangel/three.connect.svg?branch=master)](https://travis-ci.org/icynoangel/three.connect)
+[![Build Status](https://travis-ci.com/icynoangel/three.connect.svg?branch=master)](https://travis-ci.com/icynoangel/three.connect)
 [![dependencies Status](https://david-dm.org/icynoangel/three.connect/status.svg)](https://david-dm.org/icynoangel/three.connect)
 [![devDependencies Status](https://david-dm.org/icynoangel/three.connect/dev-status.svg)](https://david-dm.org/icynoangel/three.connect?type=dev)
 [![codecov](https://codecov.io/gh/icynoangel/three.connect/branch/master/graph/badge.svg)](https://codecov.io/gh/icynoangel/three.connect)
