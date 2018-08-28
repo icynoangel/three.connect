@@ -1,3 +1,5 @@
+[![NPM](https://nodei.co/npm/three.connect.png)](https://nodei.co/npm/three.connect/)
+
 ### Light implementation for setting up click handlers on threejs objects
 
 1. Sets up click handlers for objects in threejs
