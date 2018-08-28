@@ -1,4 +1,4 @@
-[![NPM](https://nodei.co/npm/three.connect.png)](https://nodei.co/npm/three.connect/)
+[![NPM](https://nodei.co/npm/three.connect.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/three.connect/)
 
 ### Light implementation for setting up click handlers on threejs objects
 
